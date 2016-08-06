@@ -16,8 +16,11 @@
 	<div class="center"></div>
 </div>
 <p></p>
+<button onclick="nightMode()" class="button1">NIGHT MODE</button>
+<button onclick="normalMode()" class="button2">NORMAL MODE</button>
 <script type="text/javascript">
-		function Spin(){
+	
+	function Spin(){
 		var x = new Date();
 		var sec = x.getSeconds();
 		var min = x.getMinutes();	
@@ -29,6 +32,27 @@
 		document.getElementsByClassName('msArrow')[0].style.transform="rotate("+ms+360+"deg)";
 	}
 	var secFunc = setInterval(Spin,1001)
+
+	function nightMode(){
+		document.querySelector('html').style.background="#212121";
+		document.querySelector('body').style.background="#212121";
+		document.getElementById('clock').style.borderColor = "#676767";
+		document.getElementById('clock').style.background = "#607D8B";
+		document.getElementById('clock').style.boxShadow = "0px 0px 200px #C2C2C2";
+		document.getElementsByClassName('msCircle')[0].style.borderColor = "#FFBE00";
+		document.getElementsByTagName('button')[0].style.background="#2E2E2E";
+		document.getElementsByTagName('button')[1].style.background="#2E2E2E";
+	}
+	function normalMode(){
+		document.querySelector('html').style.background="#00796B";
+		document.querySelector('body').style.background="#00796B";
+		document.getElementById('clock').style.background = "#00796B";		
+		document.getElementById('clock').style.borderColor = "#009688";
+		document.getElementById('clock').style.boxShadow = "0px 0px 150px #003B36";
+		document.getElementsByClassName('msCircle')[0].style.borderColor = "#00423C";
+		document.getElementsByTagName('button')[0].style.background="#162F2C";
+		document.getElementsByTagName('button')[1].style.background="#162F2C";
+	}
 
 
 
