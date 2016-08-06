@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C L O C K - JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="clock">
+	<div class="hourArrow"></div>
+	<div class="minArrow"></div>
+	<div class="secArrow"></div>
+	<div class="msCircle">
+		<div class="msArrow"></div>
+	</div>
+	<div class="center"></div>
+</div>
+<p></p>
+<script type="text/javascript">
+		function Spin(){
+		var x = new Date();
+		var sec = x.getSeconds();
+		var min = x.getMinutes();	
+		var hour = x.getHours();
+		var ms = x.getMilliseconds();
+		document.getElementsByClassName('secArrow')[0].style.transform="rotate("+sec*6+"deg)";
+		document.getElementsByClassName('minArrow')[0].style.transform="rotate("+min*6+"deg)";
+		document.getElementsByClassName('hourArrow')[0].style.transform="rotate("+hour*24+"deg)";
+		document.getElementsByClassName('msArrow')[0].style.transform="rotate("+ms+360+"deg)";
+	}
+	var secFunc = setInterval(Spin,1001)
+
+
+
+</script>
+
+
+</body>
+</html>

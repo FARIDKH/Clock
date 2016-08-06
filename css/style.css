@@ -1,0 +1,94 @@
+#clock {
+  width: 600px;
+  height: 600px;
+  border: 20px solid #009688;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px;
+  box-shadow: 0px 0px 150px #003B36; }
+
+html, body {
+  background-color: #00796B; }
+
+.center {
+  width: 50px;
+  height: 50px;
+  background-color: #B2DFDB;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 300px auto; }
+
+.hourArrow {
+  width: 10px;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .hourArrow:before {
+    content: '';
+    position: absolute;
+    top: 198px;
+    width: 100%;
+    height: 20%;
+    background-color: #1B2B34;
+    border-radius: 10px 10px 0 0;
+    transition: all 3600s linear; }
+
+.minArrow {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .minArrow:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #1B2B34;
+    transition: all 60s linear; }
+
+.secArrow {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 1s linear; }
+  .secArrow:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background-color: red;
+    transition: all 1s linear; }
+
+.msCircle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  margin: 0 auto;
+  border: 5px solid #00423C;
+  border-radius: 50%;
+  transition: all 0.001s linear; }
+  .msCircle .msArrow {
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #8BC34A;
+    transition: all 1s linear;
+    transform-origin: center bottom; }
+
+/*# sourceMappingURL=style.css.map */
